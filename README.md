@@ -5,4 +5,9 @@ I'll try to using computer vision learning and train a data set to tell LLM to s
 
 <h2>Step1. Data Research</h2>
 <p>1. Find different Data on how many Apps we have nowadays.\n
-2. How to make LLM much better in recognize vision contents.</p>
+2. How to make LLM much better in recognize vision contents.\n
+3. What vivid effects look like (visual patterns)\n
+
+4. How vivid effects are constructed (CSS, components, tokens)\n
+
+5. Why & when to use them (UX reasoning)</p>
