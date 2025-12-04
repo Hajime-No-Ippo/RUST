@@ -129,6 +129,11 @@ Iterate
 
 
 <h2>Building steps (partially)</h2>
-1. Each time we save, we take screenshot on frontend
-2. Collect the code diff
-3. Send Screenshot/code for train
+1. Each time we save, we take screenshot on frontend\n
+<p>Latest: We solved this task! once we refresh the frontend, we can solve the real-time frontend to a root folder named 'screenshot'. We solve it by using customize hook to sensor once HMR refreshed, and we set 3 different variebles to ensure we won't step into a capture infinite loop by HMR hot-reload, and also once we change the UI in the frontend, we can save the latest visual content on frontend.</p></br><p>Next step, I will try to build my own training dataset step-by-step, I had create a source folder for keeping image data, after that, I'll list all attributes which may being considered by designers when they're doing design work</p>
+
+2. Collect the code diff\n
+   
+3. Send Screenshot/code for train\n
+
+
