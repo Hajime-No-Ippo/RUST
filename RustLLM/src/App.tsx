@@ -1,19 +1,22 @@
-import { useState } from "react";
-import WebcamView from "./pages/WebcamView";
+import { invoke } from "@tauri-apps/api/core";
+import "./hmr-screenshot";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./index.css";
 
 function App() {
+  async function testScreenshot() {
+    try {
+      const path = await invoke<string>("capture_screen");
+      console.log("Screenshot saved:", path);
+      alert("Saved screenshot to: " + path);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   return (
-    <>This is the entrance
-    <a className="flex m-4 text-xl text-black animate-bounce" href = "/webcam">using webcam by using frontend </a>
-    <BrowserRouter>
-    
-    <Routes>
-    <Route path="/webcam" element={<WebcamView />} />
-    </Routes>
-    </BrowserRouter>
+    <>
+      <h1>Hi ,this is a test hi,hello? hi,hello save again, still working~~~</h1>
+      <button onClick={testScreenshot}>Screenshot</button>
     </>
   );
 }
