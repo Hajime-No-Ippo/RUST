@@ -1,0 +1,82 @@
+[
+	{
+		"id": "2025-12-05_001",
+		"timestamp": "2025-12-05T14:12:03Z",
+		"screenshot_path": "images/2025-12-05_001.png",
+		"route": "/",
+		"viewport": { "width": 1440, "height": 900, "devicePixelRatio": 2 },
+		"dominant_colors": ["#f8fafc", "#0ea5e9"],
+		"tailwind_classes": [
+			"flex",
+			"flex-col",
+			"justify-center",
+			"item-center",
+			"text-center",
+			"px-4",
+			"py-2",
+			"w-1/4",
+			"border",
+			"border-1",
+			"border-blue-500",
+			"bg-opacity-10",
+			"rounded-full",
+			"text-blue-500",
+			"text-bold",
+			"item-center"
+		],
+		"dom_structure": "<div class=\"flex flex-col justify-center item-center\"><h1 class=\"text-center\">Change again and again and Again</h1><button class=\"px-4 py-2 w-1/4 border border-1 border-blue-500 bg-opacity-10 rounded-full text-blue-500 text-bold item-center\">Screenshot</button></div>",
+		"text_content": "Change again and again and Again Screenshot",
+		"open_files": [
+			{
+				"path": "src/App.tsx",
+				"snippet": "useHMRScreenCapture(); async function testScreenshot() { try { const path = await invoke<string>(\"capture_screen\"); } catch (err) { console.error(err); } }"
+			}
+		],
+		"hmr_patch_summary": "Hot reload after updating button class names",
+		"tags": ["ui-button"],
+		"sha256": "placeholder-sha256",
+		"source": "local"
+	},
+	{
+		"id": "2025-12-05_002",
+		"timestamp": "2025-12-05T14:12:20Z",
+		"screenshot_path": "images/2025-12-05_002.png",
+		"route": "/settings",
+		"viewport": { "width": 1440, "height": 900, "devicePixelRatio": 2 },
+		"dominant_colors": ["#ffffff", "#111827"],
+		"tailwind_classes": [],
+		"dom_structure": "<div id=\"root\"><form><label>Theme</label><select id=\"theme\">...</select></form></div>",
+		"text_content": "Theme",
+		"open_files": [
+			{
+				"path": "src/components/Settings.tsx",
+				"snippet": "export default function Settings() { /* ... */ }"
+			}
+		],
+		"hmr_patch_summary": "Added theme select dropdown",
+		"tags": ["feature-settings"],
+		"sha256": "placeholder-sha256",
+		"source": "local"
+	},
+	{
+		"id": "2025-12-05_003",
+		"timestamp": "2025-12-05T14:12:45Z",
+		"screenshot_path": "images/2025-12-05_003.png",
+		"route": "/",
+		"viewport": { "width": 1440, "height": 900, "devicePixelRatio": 2 },
+		"dominant_colors": ["#f8fafc"],
+		"tailwind_classes": ["center", "text-center", "text-2xl", "md:text-4xl"],
+		"dom_structure": "<div id=\"root\"><h1 class=\"center\">Change again...</h1></div>",
+		"text_content": "Change again...",
+		"open_files": [
+			{
+				"path": "src/App.tsx",
+				"snippet": "/* modified heading class */"
+			}
+		],
+		"hmr_patch_summary": "Adjusted heading class to center content",
+		"tags": ["layout-center"],
+		"sha256": "placeholder-sha256",
+		"source": "local"
+	}
+]

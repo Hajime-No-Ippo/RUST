@@ -33,15 +33,22 @@ fn capture_screen(app_handle: tauri::AppHandle) -> Result<String, String> {
     let window_number: i32 = unsafe { msg_send![ns_window, windowNumber] };
     println!("DEBUG: macOS windowNumber = {}", window_number);
 
-    // 4. Build screenshot path
-    let home = home_dir().ok_or("Cannot get home directory".to_string())?;
-    let desktop = home.join("Desktop");
-    let output_path = desktop.join(format!(
+    // 4. Build screenshot path absolute path
+    let project_dir = std::env::current_dir()
+        .map_err(|e| format!("Cannot find current project directory: {}", e))?;
+
+    let screenshot_dir = project_dir.join("screenshots");
+
+    // Create screenshots folder if missing
+    std::fs::create_dir_all(&screenshot_dir)
+        .map_err(|e| format!("Failed to create screenshots directory: {}", e))?;
+
+    let output_path = screenshot_dir.join(format!(
         "ui-screenshot-{}.png",
         chrono::Utc::now().timestamp()
     ));
-    let output_str = output_path.to_string_lossy().to_string();
 
+let output_str = output_path.to_string_lossy().to_string();
     // 5. Build screenshot command
     let cmd = format!("screencapture -x -l {} \"{}\"", window_number, output_str);
     println!("DEBUG: {}", cmd);
